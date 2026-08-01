@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etApiKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/api_key_hint"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnTestKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/test_key"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/automation_mode"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbConservative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/automation_conservative" />
+
+            <RadioButton
+                android:id="@+id/rbFull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/automation_full" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/listening_mode"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbWake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/listening_wakeword" />
+
+            <RadioButton
+                android:id="@+id/rbPtt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/listening_ptt" />
+        </RadioGroup>
+
+    </LinearLayout>
+</ScrollView>

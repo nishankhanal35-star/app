@@ -4,5 +4,17 @@
     <string name="stop_service">Stop Service</string>
     <string name="speak_nepali">Speak Nepali (TTS)</string>
     <string name="open_whatsapp">Open WhatsApp (prefill)</string>
-    <string name="get_joke">Get Random Joke</string>
+    <string name="open_settings">Settings</string>
+    <string name="settings_title">Settings</string>
+    <string name="api_key_hint">Paste your GimenAI API key here</string>
+    <string name="save">Save</string>
+    <string name="test_key">Test Key</string>
+    <string name="key_ok">Key OK</string>
+    <string name="key_fail">Key test failed</string>
+    <string name="automation_mode">Automation mode</string>
+    <string name="automation_conservative">Conservative (recommended)</string>
+    <string name="automation_full">Full automation (risky)</string>
+    <string name="listening_mode">Listening mode</string>
+    <string name="listening_wakeword">Wake-word</string>
+    <string name="listening_ptt">Push-to-talk</string>
 </resources>

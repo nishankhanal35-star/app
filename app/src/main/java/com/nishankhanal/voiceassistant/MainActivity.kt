@@ -3,7 +3,6 @@ package com.nishankhanal.voiceassistant
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity: AppCompatActivity() {
@@ -15,8 +14,7 @@ class MainActivity: AppCompatActivity() {
         val btnStop = findViewById<Button>(R.id.btnStop)
         val btnSpeak = findViewById<Button>(R.id.btnSpeak)
         val btnOpenWhatsApp = findViewById<Button>(R.id.btnOpenWhatsApp)
-        val btnJoke = findViewById<Button>(R.id.btnJoke)
-        val tvJoke = findViewById<TextView>(R.id.tvJoke)
+        val btnSettings = findViewById<Button>(R.id.btnSettings)
 
         btnStart.setOnClickListener {
             startService(Intent(this, VoiceForegroundService::class.java))
@@ -32,19 +30,8 @@ class MainActivity: AppCompatActivity() {
             // Prefill a message to a phone number via Intent (safe fallback)
             ActionDispatcher.openWhatsAppAndPrefill(this, "+9779812345678", "नमस्ते! यो एक परीक्षण सन्देश हो।")
         }
-
-        btnJoke.setOnClickListener {
-            btnJoke.isEnabled = false
-            btnJoke.text = "Loading..."
-            Thread {
-                val joke = JokeFetcher.fetchRandomJoke()
-                runOnUiThread {
-                    btnJoke.isEnabled = true
-                    btnJoke.text = getString(R.string.get_joke)
-                    tvJoke.text = joke
-                    VoiceManager.get(this).speak(joke)
-                }
-            }.start()
+        btnSettings.setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
         }
     }
 }
