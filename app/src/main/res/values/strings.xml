@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Nepali Voice Assistant</string>
+    <string name="start_service">Start Service</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="speak_nepali">Speak Nepali (TTS)</string>
+    <string name="open_whatsapp">Open WhatsApp (prefill)</string>
+    <string name="get_joke">Get Random Joke</string>
+</resources>
