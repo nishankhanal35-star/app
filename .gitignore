@@ -1,0 +1,17 @@
+.gradle/
+/local.properties
+/.idea/
+/build/
+/captures/
+/.externalNativeBuild/
+
+# Kotlin
+*.kotlin_module
+
+# Gradle
+.gradle
+/build
+
+# Misc
+.DS_Store
+
