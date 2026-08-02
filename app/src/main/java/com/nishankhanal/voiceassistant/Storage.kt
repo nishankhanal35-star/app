@@ -9,6 +9,8 @@ object Storage {
     private const val KEY_API = "gimen_api_key"
     private const val KEY_AUTOMATION = "automation_mode"
     private const val KEY_LISTENING = "listening_mode"
+    private const val KEY_ASR_MODEL = "asr_model"
+    private const val KEY_TTS_MODEL = "tts_model"
 
     private fun prefs(context: Context) = EncryptedSharedPreferences.create(
         PREFS_NAME,
@@ -23,6 +25,18 @@ object Storage {
     }
 
     fun getApiKey(context: Context): String? = prefs(context).getString(KEY_API, null)
+
+    fun saveAsrModel(context: Context, model: String) {
+        prefs(context).edit().putString(KEY_ASR_MODEL, model).apply()
+    }
+
+    fun getAsrModel(context: Context): String? = prefs(context).getString(KEY_ASR_MODEL, null)
+
+    fun saveTtsModel(context: Context, model: String) {
+        prefs(context).edit().putString(KEY_TTS_MODEL, model).apply()
+    }
+
+    fun getTtsModel(context: Context): String? = prefs(context).getString(KEY_TTS_MODEL, null)
 
     fun setAutomationMode(context: Context, full: Boolean) {
         prefs(context).edit().putBoolean(KEY_AUTOMATION, full).apply()
